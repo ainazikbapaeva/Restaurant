@@ -1,11 +1,11 @@
 export const links = [
 	{
 		name: "interior",
-		href: "#interior",
+		href: "/",
 	},
 	{
 		name: "About Us",
-		href: "#about",
+		href: "/about",
 	},
 	{
 		name: "Menu",
@@ -13,6 +13,6 @@ export const links = [
 	},
 	{
 		name: "Contacts",
-		href: "#contacts",
+		href: "/contact",
 	},
 ];

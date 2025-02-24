@@ -20,7 +20,7 @@ namespace MENU {
     title: string;
     category: CategoryList;
     menu_name: string;
-    menu_description?: string | null; // x-nullable значит, что поле может быть null
+    menu_description?: string | null; 
   };
 
   export type GetMenuResponse = MenuList[];
