@@ -1,0 +1,383 @@
+.MenuModal {
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: #1b2026;
+	.modal_wrapper {
+		position: relative;
+		padding-top: 50px;
+		.close_icon {
+			position: absolute;
+			font-size: 38px;
+			top: 0;
+			left: 10px;
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				color: #d0cfcf;
+			}
+		}
+
+		.content {
+			max-width: 1300px;
+			margin: 0 auto;
+			display: flex;
+			align-items: start;
+			gap: clamp(50px, 8vw, 100px);
+			justify-content: center;
+			.button_box {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 35%;
+				background: rgb(31, 39, 49);
+				padding-block: 10px;
+				.buttons {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border: none;
+					background: transparent;
+					position: relative;
+					.button_text {
+						border: none;
+						width: clamp(150px, 16vw, 230px);
+						background: transparent;
+						border-bottom: 0.4px solid rgb(229, 229, 229);
+						padding-block: clamp(10px, 2vw, 20px);
+						color: rgb(255, 255, 255);
+						font-family: Crimson_Text;
+						font-size: clamp(14px, 2vw, 24px);
+						font-weight: 600;
+						line-height: 37px;
+						letter-spacing: 0%;
+						text-align: center;
+						cursor: pointer;
+						&.active {
+							z-index: 1;
+						}
+					}
+					.button_active {
+						position: absolute;
+						top: 0;
+						left: 0;
+						background: rgb(239, 39, 44);
+						width: 100%;
+						height: 100%;
+					}
+					.button_right_line {
+						position: absolute;
+						width: 60px;
+						right: -30;
+						height: 2;
+						z-index: 2;
+						background: #fff;
+					}
+				}
+			}
+			.menu_item_box {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				.menu_item {
+					border-radius: 2px;
+					background: rgb(31, 39, 49);
+					width: 100%;
+					.menu_item_wrapper {
+						display: flex;
+						.menu_item_image_box {
+							display: flex;
+							flex-direction: column;
+							.menu_item_image {
+								width: clamp(200px, 28vw, 300px);
+							}
+							.menu_item_info {
+								display: flex;
+								flex-direction: column;
+
+								gap: 6px;
+								padding: 12px;
+								.item_info_content {
+									width: 100%;
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+									.item_name {
+										color: rgb(255, 255, 255);
+										font-family: League_Spartan;
+										font-size: 16px;
+										font-weight: 600;
+										line-height: 18px;
+										letter-spacing: 0%;
+									}
+									.item_price {
+										color: rgb(239, 39, 44);
+										font-family: League_Spartan;
+										font-size: 16px;
+										font-weight: 600;
+										line-height: 18px;
+										letter-spacing: 0%;
+									}
+								}
+
+								.item_consistnce {
+									display: flex;
+									align-items: center;
+									.item_consistnce_name {
+										color: rgb(187, 187, 187);
+										font-family: Spartan;
+										font-size: 14px;
+										font-weight: 500;
+										line-height: 16px;
+										letter-spacing: 7%;
+										text-align: left;
+									}
+								}
+								.card_info_category {
+									display: none;
+									align-items: center;
+									justify-content: center;
+									width: 150px;
+									height: 42px;
+									background: red;
+									color: rgb(255, 255, 255);
+									font-family: League_Spartan;
+									font-size: 14px;
+									font-weight: 500;
+									line-height: 16px;
+									letter-spacing: 0%;
+									text-align: left;
+									border-radius: 5px;
+								}
+							}
+						}
+						.item_extras_drinks {
+							display: flex;
+							flex-direction: column;
+							gap: 30px;
+							padding: 25px 83px 25px 25;
+							width: 100%;
+							.item_extras {
+								display: flex;
+								flex-direction: column;
+								gap: 12px;
+								.extras_title {
+									color: rgb(255, 255, 255);
+									font-family: League_Spartan;
+									font-size: 18px;
+									font-weight: 600;
+									line-height: 20px;
+									letter-spacing: 0%;
+									text-align: left;
+								}
+								.extra_item {
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+									gap: 100px;
+									.item_name,
+									.item_price {
+										color: rgb(147, 147, 147);
+										font-family: Spartan;
+										font-size: 15px;
+										font-weight: 500;
+										line-height: 17px;
+										letter-spacing: 0%;
+										text-align: left;
+									}
+								}
+							}
+							.item_drinks {
+								display: flex;
+								flex-direction: column;
+								gap: 12px;
+								.drinks_title {
+									color: rgb(255, 255, 255);
+									font-family: League_Spartan;
+									font-size: 18px;
+									font-weight: 600;
+									line-height: 20px;
+									letter-spacing: 0%;
+									text-align: left;
+								}
+								.drinks_item {
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+									gap: 100px;
+									.item_name,
+									.item_price {
+										color: rgb(147, 147, 147);
+										font-family: Spartan;
+										font-size: 15px;
+										font-weight: 500;
+										line-height: 17px;
+										letter-spacing: 0%;
+										text-align: left;
+									}
+								}
+							}
+						}
+					}
+				}
+				.menu_similar_items {
+					display: flex;
+					flex-direction: column;
+					gap: 21px;
+					margin-top: 50px;
+					.similar_items_title {
+						color: rgb(255, 255, 255);
+						font-family: Crimson_Text;
+						font-size: clamp(30px, 3vw, 40px);
+						font-weight: 600;
+						line-height: 61px;
+						letter-spacing: 0%;
+						text-align: left;
+					}
+					.similar_item_content {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						gap: 16px;
+						width: 100%;
+						height: auto;
+						.card_wrapper {
+							display: flex;
+							flex-direction: column;
+							height: 250px;
+							border-radius: 2px;
+							background: rgb(255, 255, 255);
+							.card_img {
+								width: 100%;
+							}
+							.card_info {
+								padding: 12px;
+								display: flex;
+								flex-direction: column;
+								.card_name {
+									display: flex;
+									justify-content: space-between;
+									align-items: center;
+									.name {
+										color: rgb(31, 39, 49);
+
+										font-family: League_Spartan;
+										font-size: 16px;
+										font-weight: 600;
+										line-height: 18px;
+										letter-spacing: 0%;
+										text-align: left;
+									}
+									.price {
+										color: rgb(239, 39, 44);
+										font-family: League_Spartan;
+										font-size: 16px;
+										font-weight: 600;
+										line-height: 18px;
+										letter-spacing: 0%;
+										text-align: left;
+									}
+								}
+								.consistance {
+									display: flex;
+									align-items: center;
+									.consistance_item {
+										color: rgb(147, 147, 147);
+										font-family: League_Spartan;
+										font-size: 14px;
+										font-weight: 500;
+										line-height: 16px;
+										letter-spacing: 7%;
+										text-align: left;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 920px) {
+	.MenuModal {
+		.modal_wrapper {
+			.content {
+				.button_box {
+					display: none;
+				}
+				.menu_item_box {
+					width: 80%;
+					.menu_item {
+						.menu_item_wrapper {
+							.menu_item_image_box {
+								.menu_item_info {
+									.card_info_category {
+										display: flex;
+									}
+								}
+							}
+							.item_extras_drinks {
+								.item_extras {
+									.extra_item {
+										gap: 0;
+									}
+								}
+								.item_drinks {
+									.drinks_item {
+										gap: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.MenuModal {
+		.modal_wrapper {
+			.content {
+				.menu_item_box {
+					width: 80%;
+					.menu_item {
+						.menu_item_wrapper {
+							flex-direction: column;
+							.menu_item_image_box {
+								.menu_item_image {
+									width: 100%;
+								}
+							}
+							.item_extras_drinks {
+								.item_extras {
+									.extra_item {
+										gap: 0;
+									}
+								}
+								.item_drinks {
+									.drinks_item {
+										gap: 0;
+									}
+								}
+							}
+						}
+					}
+					.menu_similar_items {
+						.similar_item_content {
+							grid-template-columns: repeat(1, 1fr);
+						}
+					}
+				}
+			}
+		}
+	}
+}
