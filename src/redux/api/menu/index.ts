@@ -8,7 +8,16 @@ const api = index.injectEndpoints({
         method: "GET",
       }),
       providesTags: ["menu"]
-  })})
+  }),
+  getAbout: builder.query<MENU.GetMenuResponse, MENU.GetMenuRequest>({
+      query: () => ({
+        url: "/about_us",
+        method: "GET",
+      }),
+      providesTags: ["menu"]
+  })
+})
+  
 })
 
 export const { useGetMenuQuery } = api;
