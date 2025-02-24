@@ -1,0 +1,198 @@
+.Menu {
+	margin-top: 100px;
+	position: relative;
+	.content {
+		width: 100%;
+		display: flex;
+		align-items: start;
+		gap: clamp(50px, 8vw, 100px);
+		justify-content: center;
+		.button_box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 35%;
+			background: rgb(31, 39, 49);
+			padding-block: 10px;
+			.buttons {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+				background: transparent;
+				position: relative;
+				.button_text {
+					border: none;
+					width: clamp(150px, 16vw, 230px);
+					background: transparent;
+					border-bottom: 0.4px solid rgb(229, 229, 229);
+					padding-block: clamp(10px, 2vw, 20px);
+					color: rgb(255, 255, 255);
+					font-family: Crimson_Text;
+					font-size: clamp(14px, 2vw, 24px);
+					font-weight: 600;
+					line-height: 37px;
+					letter-spacing: 0%;
+					text-align: center;
+					cursor: pointer;
+					&.active {
+						z-index: 1;
+					}
+				}
+				.button_active {
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: rgb(239, 39, 44);
+					width: 100%;
+					height: 100%;
+				}
+				.button_line {
+					position: absolute;
+					width: 60px;
+					right: -30;
+					height: 2;
+					z-index: 2;
+					background: #fff;
+				}
+			}
+		}
+		.card_box {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
+			.card_wrapper {
+				display: flex;
+				flex-direction: column;
+				height: 250px;
+				border-radius: 2px;
+				background: rgb(255, 255, 255);
+				.card_img {
+					width: 100%;
+				}
+				.card_info {
+					padding: 12px;
+					display: flex;
+					flex-direction: column;
+					.card_name {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						.name {
+							color: rgb(31, 39, 49);
+
+							font-family: League_Spartan;
+							font-size: 16px;
+							font-weight: 600;
+							line-height: 18px;
+							letter-spacing: 0%;
+							text-align: left;
+						}
+						.price {
+							color: rgb(239, 39, 44);
+							font-family: League_Spartan;
+							font-size: 16px;
+							font-weight: 600;
+							line-height: 18px;
+							letter-spacing: 0%;
+							text-align: left;
+						}
+					}
+					.consistance {
+						display: flex;
+						align-items: center;
+						.consistance_item {
+							color: rgb(147, 147, 147);
+							font-family: League_Spartan;
+							font-size: 14px;
+							font-weight: 500;
+							line-height: 16px;
+							letter-spacing: 7%;
+							text-align: left;
+						}
+					}
+					.price_mobile {
+						display: none;
+						color: rgb(239, 39, 44);
+						font-family: League_Spartan;
+						font-size: 16px;
+						font-weight: 600;
+						line-height: 18px;
+						letter-spacing: 0%;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.Menu {
+		.content {
+			flex-direction: column;
+			width: 100%;
+			.button_box {
+				width: 100%;
+				flex-direction: row;
+				gap: 20px;
+				background-color: transparent;
+				overflow: hidden;
+				overflow-x: auto;
+				scrollbar-width: none;
+				-ms-overflow-style: none;
+				.buttons {
+					background-color: black;
+					.button_text {
+						border: none;
+					}
+					.button_line {
+						display: none;
+					}
+				}
+			}
+			.card_box {
+				grid-template-columns: repeat(3, 1fr);
+				justify-content: center;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.Menu {
+		.content {
+			.card_box {
+				grid-template-columns: repeat(1, 1fr);
+				.card_wrapper {
+					flex-direction: row;
+					background: transparent;
+					border-bottom: 0.4px solid rgb(229, 229, 229);
+					height: auto;
+					padding-bottom: 25px;
+					align-items: center;
+					.card_img {
+						width: 101px;
+						height: 100px;
+					}
+					.card_info {
+						gap: 10px;
+						.card_name {
+							.name {
+								color: white;
+							}
+							.price {
+								display: none;
+							}
+						}
+						.price_mobile {
+							display: flex;
+						}
+					}
+				}
+			}
+		}
+	}
+}

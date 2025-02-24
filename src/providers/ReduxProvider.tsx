@@ -1,14 +1,15 @@
 "use client";
-import { api } from "@/redux/api";
-import { ApiProvider } from "@reduxjs/toolkit/query/react";
+
+import { store } from "@/redux/store";
 import { FC, ReactNode } from "react";
+import { Provider } from "react-redux";
 
 interface ILayoutSiteProps {
 	children: ReactNode;
 }
 
 const ReduxProvider: FC<ILayoutSiteProps> = ({ children }) => {
-	return <ApiProvider api={api}>{children}</ApiProvider>;
+	return <Provider store={store}>{children}</Provider>
 };
 
 export default ReduxProvider;
