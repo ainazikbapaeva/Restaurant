@@ -1,0 +1,343 @@
+#Reverse {
+  padding: 100px 0;
+  .Reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Reverse_image {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transform: rotate();
+      width: 100%;
+      max-width: 630px;
+      .gallery {
+        width: 100%;
+        max-width: 570px;
+        display: flex;
+        gap: 20px;
+        overflow: scroll;
+      }
+      .gallery::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+    .Reverse_text {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 30px;
+      .Reverse_about {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        h2 {
+          font-family: "Shalimar", cursive;
+          font-size: 30px;
+          font-weight: 400;
+          color: #ffffff;
+        }
+      }
+      h1 {
+        width: 320px;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 61.36px;
+        color: white;
+        font-family: Silk Serif;
+      }
+      p {
+        width: 407px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: grey;
+      }
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  #Reverse {
+    padding: 70px 0;
+    .Reverse {
+      position: relative;
+      .Reverse_image {
+        position: absolute;
+        right: -40px;
+        max-width: 540px;
+        gap: 15px;
+        .gallery {
+          
+          max-width: 460px;
+            img {
+              width: 230px;
+            }
+
+        }
+      }
+      .Reverse_text {
+        gap: 30px;
+        .Reverse_about {
+          gap: 20px;
+          h2 {
+            font-size: 27px;
+          }
+        }
+        h1 {
+          width: 100%;
+          max-width: 320px;
+          font-size: 35px;
+        }
+        p {
+          width: 100%;
+          max-width: 447px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 950px) {
+  #Reverse {
+    .Reverse {
+      .Reverse_image {
+        width: auto;
+        .gallery {
+          max-width: 230px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  #Reverse {
+    padding: 40px 0;
+    .Reverse {
+      .Reverse_image {
+        position: relative;
+        gap: 15px;
+        .gallery {
+
+          width: 100%;
+          max-width: 360px;
+          img {    
+            height: auto;
+          }
+        }
+        img {
+          width: 20px;
+          // &:nth-child(2) {
+
+          //   width: 180px;
+          // }
+          // &:nth-child(3) {
+
+          //   width: 180px;
+          // }
+        }
+      }
+      .Reverse_text {
+        gap: 10px;
+        .Reverse_about {
+          gap: 10px;
+          img {
+            width: 40px;
+          }
+          h2 {
+            font-size: 24px;
+          }
+        }
+        h1 {
+          max-width: 250px;
+          font-size: 30px;
+          line-height: 40px;
+        }
+        p {
+          max-width: 290px;
+          font-size: 13px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media (max-width: 834px) {
+  #Reverse {
+    padding: 20px 0;
+    .Reverse {
+      flex-direction: column;
+      justify-content: start;
+      flex-grow: 1;
+      align-items: flex-start;
+      .Reverse_image {
+        position: static;
+        box-sizing: content-box;
+        width: 100%;
+        min-width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+        .gallery {
+          max-width: 100%;
+          img{
+            width: 250px;
+          }
+        }
+        img {
+          width: 24px;
+        }
+
+      }
+      .Reverse_text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+        .Reverse_about {
+          align-items: center;
+          gap: 30px;
+          h2 {
+            font-size: 30px;
+          }
+        }
+        h1 {
+          max-width: 515px;
+          font-size: 40px;
+          line-height: 61.36px;
+        }
+        p {
+          max-width: 447px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  
+}
+@media (max-width: 600px) {
+  #Reverse {
+    padding: 20px 0;
+    .Reverse {
+      .Reverse_image {
+        
+        .gallery {
+          max-width: 400px;
+          img {
+            width: 200px;
+          }
+        }
+        img {
+          width: 20px;
+
+          // &:nth-child(2) {
+          //   // width: 100%;
+          //   width: 200px;
+          // }
+          // &:nth-child(3) {
+          //   // width: 100%;
+          //   width: 200px;
+          // }
+        }
+
+      }
+      .Reverse_text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        // width: 100%;
+        .Reverse_about {
+          gap: 10px;
+          img {
+            width: 30px;
+          }
+          h2 {
+            font-family: "Shalimar", cursive;
+            font-size: 25px;
+          }
+        }
+        h1 {
+          max-width: 400px;
+          font-size: 33px;
+          line-height: 50.36px;
+        }
+        p {
+          max-width: 415px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: grey;
+        }
+      }
+    }
+  }
+  
+}
+@media (max-width: 480px) {
+  #Reverse {
+    padding: 0px;
+    .Reverse {
+      align-items: flex-start;
+      .Reverse_image {
+        border-left: 1px solid #BBBBBB;
+        height: auto;
+        box-sizing: border-box;
+        padding-left: 15px;
+        overflow: scroll;
+        // position: relative;
+        .gallery {
+          // position: absolute;
+          right: -0px;
+          width: 100%;
+          img {
+            height: auto;
+          }
+        }
+        img {
+          width: 48px;
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      .Reverse_text {
+        gap: 20px;
+        .Reverse_about {
+          gap: 10px;
+          img {
+            width: 48px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+        }
+        h1 {
+          max-width: 400px;
+          font-size: 28px;
+          line-height: 40.36px;
+        }
+        p {
+          max-width: 415px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  
+}
