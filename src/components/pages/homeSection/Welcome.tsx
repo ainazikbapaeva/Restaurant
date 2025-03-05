@@ -51,7 +51,9 @@ const Welcome = () => {
 					<p>{text.descr}</p>
 					<div className={scss.btnBlock}>
 						<div className={scss.line}></div>
-						<button onClick={() => setIsOpen(true)}>
+						<button
+							style={{ cursor: "pointer", color: "white" }}
+							onClick={() => setIsOpen(true)}>
 							Reserve Your Table
 							<GrFormNextLink />
 						</button>

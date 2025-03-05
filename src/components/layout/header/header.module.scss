@@ -1,5 +1,5 @@
 .header {
-	padding: 15px 0;
+	padding: 1px 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -11,23 +11,22 @@
 	.content {
 		display: flex;
 		align-items: center;
-		// justify-content: space-around;
-		// justify-content: space-evenly;
 		justify-content: space-between;
 		gap: clamp(20px, 4vw, 50px);
-		padding: 0 70px;
+		padding: 0 60px;
 
 		h3 {
-			font-family: Silk Serif;
+			font-family: Silk Serif; 
 			font-weight: 600;
 			font-size: 28px;
 			line-height: 42.95px;
 			cursor: pointer;
+			color: #fff;
 
 			&:hover {
 				color: #ef272c;
 				transition: 0.3s;
-				transform: translateY(-2px);
+				transform: translateY(2px);
 				transform: translateY(2px);
 			}
 		}

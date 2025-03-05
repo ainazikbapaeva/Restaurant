@@ -4,7 +4,7 @@ import Image from 'next/image';
 import scss from './footer.module.scss';
 import footer_logo from '@/assets/images/header-logo.svg';
 import Link from 'next/link';
-import { FaTelegramPlane, FaInstagram } from 'react-icons/fa';
+import { FaTelegramPlane, FaInstagram } from 'react-icons/fa';                                                                                           
 
 const Footer = () => {
   return (
